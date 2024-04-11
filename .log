@@ -1,0 +1,53 @@
+Fri Apr 12 01:49:10 2024: Received expression: «x+x+x»
+Program finished!
+
+Fri Apr 12 01:49:38 2024: Received expression: «-8x^40-74x+8x^40+5-x^3»
+Fri Apr 12 01:49:49 2024: Received expression: «gp94oqb3ljfw,e»
+Fri Apr 12 01:49:49 2024: Error occured! Incorrect symbol in position 2, string = «gp94oqb3ljfw,e»
+Fri Apr 12 01:49:51 2024: Received expression: «ofek[pjqijw»
+Fri Apr 12 01:49:51 2024: Error occured! Incorrect symbol in position 4, string = «ofek[pjqijw»
+Fri Apr 12 01:49:52 2024: Received expression: «fjeqpiwnlj,»
+Fri Apr 12 01:49:52 2024: Error occured! Incorrect symbol in position 10, string = «fjeqpiwnlj,»
+Fri Apr 12 01:49:53 2024: Received expression: «qjfwieonjlwef»
+Fri Apr 12 01:49:54 2024: Received expression: «fejwkgbqekjfjheowf»
+Fri Apr 12 01:49:55 2024: Received expression: «jfe[oawihf»
+Fri Apr 12 01:49:55 2024: Error occured! Incorrect symbol in position 3, string = «jfe[oawihf»
+Fri Apr 12 01:49:59 2024: Received expression: «xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx»
+Fri Apr 12 01:50:08 2024: Received expression: «xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy»
+Fri Apr 12 01:50:11 2024: Received expression: «clear»
+Fri Apr 12 01:50:14 2024: Received expression: «nuclear»
+Fri Apr 12 01:50:16 2024: Received expression: «hui»
+Fri Apr 12 01:50:18 2024: Received expression: «okay»
+Fri Apr 12 01:50:22 2024: Received expression: «x^28349283409»
+Fri Apr 12 01:50:33 2024: Received expression: «x^482309482309+y^82309472390x^184902174z^8240912»
+Program finished!
+
+Fri Apr 12 01:52:20 2024: Received expression: «3x^2+4x-7»
+Fri Apr 12 01:52:20 2024: Received expression: «6x^3-2x^2+5x-1»
+Fri Apr 12 01:52:20 2024: Received expression: «-2y^2+3y-1»
+Fri Apr 12 01:52:20 2024: Received expression: «5x^4-2x^3+x^2-3x+7»
+Fri Apr 12 01:52:20 2024: Received expression: «2x^2-8x-1»
+Fri Apr 12 01:52:20 2024: Received expression: «4y^3+2y^2-3y+1»
+Fri Apr 12 01:52:20 2024: Received expression: «-3x^3-x+9»
+Fri Apr 12 01:52:20 2024: Received expression: «7z^2-z+10»
+Fri Apr 12 01:52:20 2024: Received expression: «9x^5+3x^4+5x^3+2x^2+x-3»
+Fri Apr 12 01:52:20 2024: Received expression: «6y^4+4y^3+2y^2+y-9»
+Fri Apr 12 01:52:20 2024: Received expression: «4x^2+2x+y^2»
+Fri Apr 12 01:52:20 2024: Received expression: «3x^2+4x+2xy»
+Fri Apr 12 01:52:20 2024: Received expression: «4x^2-3+2x»
+Fri Apr 12 01:52:20 2024: Received expression: «5x+3+x^2y»
+Fri Apr 12 01:52:22 2024: Received expression: «2x^2-3x^0»
+Program finished!
+
+Fri Apr 12 01:52:45 2024: Received expression: «2x^2+3^x-1»
+Fri Apr 12 01:52:45 2024: Error occured! Incorrect symbol in position 6, string = «2x^2+3^x-1»
+Fri Apr 12 01:52:45 2024: Received expression: «x10»
+Fri Apr 12 01:52:45 2024: Error occured! Incorrect symbol in position 1, string = «x10»
+Fri Apr 12 01:52:45 2024: Received expression: «x^3+2x^2+5/x»
+Fri Apr 12 01:52:45 2024: Error occured! Incorrect symbol in position 10, string = «x^3+2x^2+5/x»
+Fri Apr 12 01:52:45 2024: Received expression: «x^2+7x-5x^»
+Fri Apr 12 01:52:45 2024: Error occured! Polynomial ends with operator ^, string = «x^2+7x-5x^»
+Fri Apr 12 01:52:46 2024: Received expression: «6x^2+2/x+4»
+Fri Apr 12 01:52:46 2024: Error occured! Incorrect symbol in position 6, string = «6x^2+2/x+4»
+Program finished!
+
