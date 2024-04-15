@@ -28,7 +28,7 @@ class List {
 
     void erase(size_t);
 
-    T& operator[](size_t);
+    T& operator[](size_t) const;
 };
 
 template<class T>
@@ -93,7 +93,7 @@ void List<T>::erase(size_t pos) {
 }
 
 template<class T>
-T& List<T>::operator[](size_t pos) {
+T& List<T>::operator[](size_t pos) const {
     if (pos >= size_) throw std::out_of_range("Index is greater than List size");
     Node *q = root;
     while (pos--) {

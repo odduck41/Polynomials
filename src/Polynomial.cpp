@@ -45,6 +45,25 @@ Monomial::Monomial(const std::string& term) {
     }
 }
 
+void Polynomial::normalize() {
+    for (int i = 0; i < monomials.size(); ++i) {
+        for (int j = i + 1; j < monomials.size();) {
+            bool eq = true;
+            for (int f = 0; f < 26; ++f) {
+                if (monomials[i].powers[f] != monomials[j].powers[f]) {
+                    eq = false;
+                }
+            }
+            if (eq) {
+                monomials[i].coefficient += monomials[j].coefficient;
+                monomials.erase(j);
+                continue;
+            }
+            ++j;
+        }
+    }
+}
+
 Polynomial::Polynomial(const std::string& expression) {
     std::string expr; // with removed spaces
     for (auto& letter: expression) {
@@ -63,6 +82,7 @@ Polynomial::Polynomial(const std::string& expression) {
         a  << (std::string)"Some error occured, idk what is this: " + err.what();
     }
     parse(expr);
+    normalize();
 }
 
 void Polynomial::parse(const std::string& expression) {

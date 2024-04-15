@@ -31,11 +31,10 @@ class Polynomial {
     explicit Polynomial(const std::string&);
 
     void print();
-
     List<Monomial> monomials;
   private:
     int var_c = 0;
-
+    void normalize();
     void parse(const std::string&); // Ugh...
 };
 
