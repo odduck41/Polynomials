@@ -32,6 +32,7 @@ class Polynomial {
 
     void print();
     List<Monomial> monomials;
+    Polynomial operator+(Polynomial other) const;
   private:
     int var_c = 0;
     void normalize();

@@ -18,7 +18,7 @@ class List {
     Node *tail{};
     size_t size_{};
   public:
-    size_t size() { return size_; };
+    [[nodiscard]] size_t size() const { return size_; };
 
     void insert_head(const T&);
 
@@ -88,6 +88,8 @@ void List<T>::erase(size_t pos) {
     }
     if (q->next != nullptr) {
         q->next->prev = q->prev;
+    } else {
+        tail = q->prev;
     }
     delete q;
 }

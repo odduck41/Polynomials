@@ -86,3 +86,60 @@ Mon Apr 15 13:13:27 2024: Received expression: «ui^2+iu^@»
 Mon Apr 15 13:13:27 2024: Error occured! Incorrect symbol in position 8, string = «ui^2+iu^@»
 Program finished!
 
+Mon Apr 15 13:33:20 2024: Received expression: «x^2»
+Mon Apr 15 13:33:21 2024: Received expression: «x^2»
+Program finished!
+
+Mon Apr 15 13:33:49 2024: Received expression: «x^2+x»
+Mon Apr 15 13:33:53 2024: Received expression: «x^2+x»
+Program finished!
+
+Mon Apr 15 13:34:38 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 13:34:48 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 13:35:16 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 13:35:20 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:05:15 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:05:19 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:07:20 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:07:25 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:09:40 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:09:45 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:10:20 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:10:24 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:10:45 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:10:49 2024: Received expression: «ab+bc+ac»
+Program finished!
+
+Mon Apr 15 14:12:40 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:12:44 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:12:49 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:12:52 2024: Received expression: «ab+bc+ac»
+Program finished!
+
+Mon Apr 15 14:13:10 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:13:15 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:14:43 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:14:50 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:15:19 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:15:27 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:15:33 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:15:40 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:15:40 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:16:14 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:16:14 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:17:09 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:17:09 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:18:43 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:18:43 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:20:47 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:20:47 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:21:24 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:21:24 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:21:31 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:21:31 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:23:26 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:23:26 2024: Received expression: «2ab+3bc+2ab»
+Mon Apr 15 14:25:31 2024: Received expression: «ab+bc+ac»
+Mon Apr 15 14:25:31 2024: Received expression: «2ab+3bc+2ab»
+Program finished!
+

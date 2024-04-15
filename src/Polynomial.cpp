@@ -113,7 +113,7 @@ void Polynomial::print() {
         } else if (monomials[i].coefficient != 1 || !flag) {
             std::cout << monomials[i].coefficient;
         }
-        for (int j = 0; j < monomials[i].powers.size(); ++j) {
+        for (int j = 0; j < 26; ++j) {
             if (monomials[i].powers[j] != 0) {
                 std::cout << char(j + 'a');
                 if (monomials[i].powers[j] != 1) {
@@ -126,4 +126,28 @@ void Polynomial::print() {
         }
     }
     std::cout << "\n";
+}
+
+Polynomial Polynomial::operator+(Polynomial other) const {
+    for (int i = 0; i < monomials.size(); ++i) {
+        bool flag = false;
+        for (int j = 0; j < other.monomials.size();) {
+            bool s_flag = true;
+            for (int k = 0; k < 26; ++k) {
+                if (monomials[i].powers[k] != other.monomials[j].powers[k]) {
+                    s_flag = false;
+                }
+            }
+            if (s_flag) {
+                other.monomials[j].coefficient += monomials[i].coefficient;
+                flag = true;
+                break;
+            }
+            ++j;
+        }
+        if (!flag) {
+            other.monomials.insert_tail(monomials[i]);
+        }
+    }
+    return other;
 }
