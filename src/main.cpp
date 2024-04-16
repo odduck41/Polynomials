@@ -13,7 +13,7 @@ int main() {
     getline(cin, a);
     auto o = Polynomial(a);
     auto e = p + o;
-    e.print();
+    std::cout << std::string(e);
     Logger final;
     final.close();
 }

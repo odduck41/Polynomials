@@ -30,7 +30,7 @@ class Polynomial {
   public:
     explicit Polynomial(const std::string&);
 
-    void print();
+    explicit operator std::string() const;
     List<Monomial> monomials;
     Polynomial operator+(Polynomial other) const;
   private:

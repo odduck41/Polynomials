@@ -143,3 +143,28 @@ Mon Apr 15 14:25:31 2024: Received expression: «ab+bc+ac»
 Mon Apr 15 14:25:31 2024: Received expression: «2ab+3bc+2ab»
 Program finished!
 
+Tue Apr 16 13:00:26 2024: Received expression: «x^2»
+Tue Apr 16 13:00:28 2024: Received expression: «x^3»
+Program finished!
+
+Tue Apr 16 13:00:43 2024: Received expression: «x^2+x^1+5x^0»
+Tue Apr 16 13:00:56 2024: Received expression: «3x^2+4x+6»
+Program finished!
+
+Tue Apr 16 13:05:53 2024: Received expression: «jdytnhg»
+Tue Apr 16 13:06:08 2024: Received expression: «uykjhgmilhghrhtbhtrujyrhtrbgrcythrhydtrhgcejytcehtrexxutrchtrdnhyrmcythbgterycebgtexhytecngfcjytexbgfeyceyrexhy»
+Program finished!
+
+Tue Apr 16 13:06:34 2024: Received expression: «x+y»
+Tue Apr 16 13:06:38 2024: Received expression: «x-y»
+Program finished!
+
+Tue Apr 16 13:08:13 2024: Received expression: «x+y»
+Tue Apr 16 13:08:15 2024: Received expression: «x-y»
+Program finished!
+
+Tue Apr 16 13:08:36 2024: Received expression: «x^2»
+Tue Apr 16 13:09:16 2024: Received expression: «x^2+y^0»
+Tue Apr 16 13:09:19 2024: Received expression: «0»
+Program finished!
+

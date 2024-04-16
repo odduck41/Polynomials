@@ -46,7 +46,7 @@ Monomial::Monomial(const std::string& term) {
 }
 
 void Polynomial::normalize() {
-    for (int i = 0; i < monomials.size(); ++i) {
+    for (size_t i = 0; i < monomials.size();) {
         for (int j = i + 1; j < monomials.size();) {
             bool eq = true;
             for (int f = 0; f < 26; ++f) {
@@ -61,6 +61,11 @@ void Polynomial::normalize() {
             }
             ++j;
         }
+        if (monomials[i].coefficient == 0) {
+            monomials.erase(i);
+            continue;
+        }
+        ++i;
     }
 }
 
@@ -102,52 +107,57 @@ void Polynomial::parse(const std::string& expression) {
     monomials.insert(Monomial(now));
 }
 
-void Polynomial::print() {
+Polynomial::operator std::string() const {
+    std::string answer;
     for (int i = 0; i < monomials.size(); ++i) {
         bool flag = false;
         for (auto& j: monomials[i].powers) {
             if (j != 0) flag = true;
         }
         if (monomials[i].coefficient == -1 && flag) {
-            std::cout << "-";
+            answer += "-";
         } else if (monomials[i].coefficient != 1 || !flag) {
-            std::cout << monomials[i].coefficient;
+            answer += std::to_string(monomials[i].coefficient);
         }
         for (int j = 0; j < 26; ++j) {
             if (monomials[i].powers[j] != 0) {
-                std::cout << char(j + 'a');
+                answer += char(j + 'a');
                 if (monomials[i].powers[j] != 1) {
-                    std::cout << "^" << monomials[i].powers[j];
+                    answer += "^" + std::to_string(monomials[i].powers[j]);
                 }
             }
         }
         if (i + 1 != monomials.size()) {
-            std::cout << " + ";
+            answer += " + ";
         }
     }
-    std::cout << "\n";
+    return answer;
 }
 
 Polynomial Polynomial::operator+(Polynomial other) const {
+//    for (int i = 0; i < monomials.size(); ++i) {
+//        bool flag = false;
+//        for (int j = 0; j < other.monomials.size();) {
+//            bool s_flag = true;
+//            for (int k = 0; k < 26; ++k) {
+//                if (monomials[i].powers[k] != other.monomials[j].powers[k]) {
+//                    s_flag = false;
+//                }
+//            }
+//            if (s_flag) {
+//                other.monomials[j].coefficient += monomials[i].coefficient;
+//                flag = true;
+//                break;
+//            }
+//            ++j;
+//        }
+//        if (!flag) {
+//            other.monomials.insert_tail(monomials[i]);
+//        }
+//    }
     for (int i = 0; i < monomials.size(); ++i) {
-        bool flag = false;
-        for (int j = 0; j < other.monomials.size();) {
-            bool s_flag = true;
-            for (int k = 0; k < 26; ++k) {
-                if (monomials[i].powers[k] != other.monomials[j].powers[k]) {
-                    s_flag = false;
-                }
-            }
-            if (s_flag) {
-                other.monomials[j].coefficient += monomials[i].coefficient;
-                flag = true;
-                break;
-            }
-            ++j;
-        }
-        if (!flag) {
-            other.monomials.insert_tail(monomials[i]);
-        }
-    }
+        other.monomials.insert(monomials[i]);
+    };
+    other.normalize();
     return other;
 }
