@@ -168,7 +168,6 @@ Polynomial Polynomial::operator+(const Polynomial& other) const {
 }
 
 Polynomial Polynomial::operator*(const Polynomial& other) const {
-    auto sz = other.monomials.size();
     Polynomial answer;
     for (size_t i = 0; i < other.monomials.size(); ++i) {
         for (size_t j = 0; j < monomials.size(); ++j) {
@@ -190,10 +189,26 @@ void Polynomial::sort() const {
     for (int i = 0; i < monomials.size(); ++i) {
         for (int j = i + 1; j < monomials.size(); ++j) {
             if (monomials[i] < monomials[j]) {
-                std::swap(monomials[i], monomials[j]);
+                std::swap(monomials[i].coefficient, monomials[j].coefficient);
+                std::swap(monomials[i].powers, monomials[j].powers);
             }
         }
     }
+}
+
+bool Polynomial::operator==(const Polynomial& other) const {
+    if (other.monomials.size() != monomials.size()) return false;
+    for (int i = 0; i < monomials.size(); ++i) {
+        if (monomials[i].coefficient != other.monomials[i].coefficient) {
+            return false;
+        }
+        for (int j = 0; j < 26; ++j) {
+            if (monomials[i].powers[j] != other.monomials[i].powers[j]) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
 

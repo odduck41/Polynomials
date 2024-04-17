@@ -34,8 +34,9 @@ class Polynomial {
 
     explicit operator std::string() const;
     List<Monomial> monomials;
-    Polynomial operator+(const Polynomial& other) const;
-    Polynomial operator*(const Polynomial& other) const;
+    Polynomial operator+(const Polynomial&) const;
+    Polynomial operator*(const Polynomial&) const;
+    bool operator==(const Polynomial&) const;
   private:
     int var_c = 0;
     void normalize();
