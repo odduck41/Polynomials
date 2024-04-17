@@ -155,30 +155,35 @@ Polynomial::operator std::string() const {
     return answer;
 }
 
-Polynomial Polynomial::operator+(Polynomial other) const {
+Polynomial Polynomial::operator+(const Polynomial& other) const {
+    Polynomial answer;
     for (int i = 0; i < monomials.size(); ++i) {
-        other.monomials.insert(monomials[i]);
+        answer.monomials.insert(monomials[i]);
+    }
+    for (int i = 0; i < other.monomials.size(); ++i) {
+        answer.monomials.insert(monomials[i]);
     };
-    other.normalize();
-    return other;
+    answer.normalize();
+    return answer;
 }
 
-Polynomial Polynomial::operator*(Polynomial other) const {
+Polynomial Polynomial::operator*(const Polynomial& other) const {
     auto sz = other.monomials.size();
-    while (sz--) {
-        auto coeff = other.monomials[0].coefficient;
-        auto p = other.monomials[0].powers;
-        other.monomials.erase(0);
+    Polynomial answer;
+    for (size_t i = 0; i < other.monomials.size(); ++i) {
         for (size_t j = 0; j < monomials.size(); ++j) {
             Monomial x;
-            x.powers = p;
-            
-            x.coefficient = coeff * monomials[j].coefficient;
-
+            x.powers = other.monomials[i].powers;
+            x.coefficient = other.monomials[i].coefficient;
+            x.coefficient *= monomials[j].coefficient;
+            for (int k = 0; k < 26; ++k) {
+                x.powers[k] += monomials[j].powers[k];
+            }
+            answer.monomials.insert(x);
         }
     }
-    other.normalize();
-    return other;
+    answer.normalize();
+    return answer;
 }
 
 void Polynomial::sort() const {

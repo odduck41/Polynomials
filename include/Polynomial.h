@@ -29,12 +29,13 @@ struct Monomial {
 
 class Polynomial {
   public:
+    Polynomial() = default;
     explicit Polynomial(const std::string&);
 
     explicit operator std::string() const;
     List<Monomial> monomials;
-    Polynomial operator+(Polynomial other) const;
-    Polynomial operator*(Polynomial other) const;
+    Polynomial operator+(const Polynomial& other) const;
+    Polynomial operator*(const Polynomial& other) const;
   private:
     int var_c = 0;
     void normalize();
