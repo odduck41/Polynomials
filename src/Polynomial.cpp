@@ -99,11 +99,14 @@ Polynomial::Polynomial(const std::string& expression) {
         stateMachine(expr);
     } catch(Devil& err) {
         a << (std::string)"Error occured! " + (std::string)err.what();
+        throw err;
     } catch (string_error& err) {
         Logger b;
         b << (std::string)"Error occured! " + (std::string)err.what();
+        throw err;
     } catch (std::exception& err) {
-        a  << (std::string)"Some error occured, idk what is this: " + err.what();
+        a << (std::string)"Some error occured, idk what is this: " + err.what();
+        throw err;
     }
     parse(expr);
     normalize();
