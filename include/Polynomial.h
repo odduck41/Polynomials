@@ -24,6 +24,7 @@ struct Monomial {
 
     long long coefficient{};
     std::vector<long long> powers{};
+    bool operator<(const Monomial&);
 };
 
 class Polynomial {
@@ -33,9 +34,11 @@ class Polynomial {
     explicit operator std::string() const;
     List<Monomial> monomials;
     Polynomial operator+(Polynomial other) const;
+    Polynomial operator*(Polynomial other) const;
   private:
     int var_c = 0;
     void normalize();
     void parse(const std::string&); // Ugh...
+    void sort() const;
 };
 

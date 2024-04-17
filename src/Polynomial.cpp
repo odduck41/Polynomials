@@ -45,9 +45,17 @@ Monomial::Monomial(const std::string& term) {
     }
 }
 
+bool Monomial::operator<(const Monomial& other) {
+    for (int i = 0; i < 26; ++i) {
+        if (powers[i] < other.powers[i]) return true;
+        else if (powers[i] > other.powers[i]) return false;
+    }
+    return coefficient < other.coefficient;
+}
+
 void Polynomial::normalize() {
     for (size_t i = 0; i < monomials.size();) {
-        for (int j = i + 1; j < monomials.size();) {
+        for (auto j = i + 1; j < monomials.size();) {
             bool eq = true;
             for (int f = 0; f < 26; ++f) {
                 if (monomials[i].powers[f] != monomials[j].powers[f]) {
@@ -67,6 +75,17 @@ void Polynomial::normalize() {
         }
         ++i;
     }
+    var_c = 0;
+    for (size_t i = 0; i < monomials.size(); ++i) {
+        int vars = 0;
+        for (auto& var: monomials[i].powers) {
+            if (var) {
+                ++vars;
+            }
+        }
+        var_c = std::max(var_c, vars);
+    }
+    sort();
 }
 
 Polynomial::Polynomial(const std::string& expression) {
@@ -95,6 +114,7 @@ void Polynomial::parse(const std::string& expression) {
     for (auto& letter: expression) {
         if (letter == '+') {
             monomials.insert(Monomial(now));
+
             now = {};
             continue;
         }
@@ -105,6 +125,7 @@ void Polynomial::parse(const std::string& expression) {
         now += letter;
     }
     monomials.insert(Monomial(now));
+
 }
 
 Polynomial::operator std::string() const {
@@ -135,29 +156,39 @@ Polynomial::operator std::string() const {
 }
 
 Polynomial Polynomial::operator+(Polynomial other) const {
-//    for (int i = 0; i < monomials.size(); ++i) {
-//        bool flag = false;
-//        for (int j = 0; j < other.monomials.size();) {
-//            bool s_flag = true;
-//            for (int k = 0; k < 26; ++k) {
-//                if (monomials[i].powers[k] != other.monomials[j].powers[k]) {
-//                    s_flag = false;
-//                }
-//            }
-//            if (s_flag) {
-//                other.monomials[j].coefficient += monomials[i].coefficient;
-//                flag = true;
-//                break;
-//            }
-//            ++j;
-//        }
-//        if (!flag) {
-//            other.monomials.insert_tail(monomials[i]);
-//        }
-//    }
     for (int i = 0; i < monomials.size(); ++i) {
         other.monomials.insert(monomials[i]);
     };
     other.normalize();
     return other;
 }
+
+Polynomial Polynomial::operator*(Polynomial other) const {
+    auto sz = other.monomials.size();
+    while (sz--) {
+        auto coeff = other.monomials[0].coefficient;
+        auto p = other.monomials[0].powers;
+        other.monomials.erase(0);
+        for (size_t j = 0; j < monomials.size(); ++j) {
+            Monomial x;
+            x.powers = p;
+            
+            x.coefficient = coeff * monomials[j].coefficient;
+
+        }
+    }
+    other.normalize();
+    return other;
+}
+
+void Polynomial::sort() const {
+    for (int i = 0; i < monomials.size(); ++i) {
+        for (int j = i + 1; j < monomials.size(); ++j) {
+            if (monomials[i] < monomials[j]) {
+                std::swap(monomials[i], monomials[j]);
+            }
+        }
+    }
+}
+
+

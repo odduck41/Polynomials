@@ -168,3 +168,23 @@ Tue Apr 16 13:09:16 2024: Received expression: «x^2+y^0»
 Tue Apr 16 13:09:19 2024: Received expression: «0»
 Program finished!
 
+Wed Apr 17 09:06:12 2024: Received expression: «a^2b^2+ab^2+cb^3+a^3»
+Program finished!
+
+Wed Apr 17 09:07:50 2024: Received expression: «a^2b^2+ab^2+cb^3+a^3»
+Program finished!
+
+Wed Apr 17 09:10:50 2024: Received expression: «5x^2-5x^2+3x^3-3x^3+10x^2+324234+24x+12»
+Program finished!
+
+Wed Apr 17 09:11:25 2024: Received expression: «5x^2-5x^2+3x^3-3x^3+10x^2+324234+24x+12»
+Program finished!
+
+Wed Apr 17 09:41:30 2024: Received expression: «x+y»
+Program finished!
+
+Wed Apr 17 09:41:48 2024: Received expression: «x+y»
+Wed Apr 17 09:42:42 2024: Received expression: «x+y»
+Wed Apr 17 09:43:53 2024: Received expression: «x+y»
+Program finished!
+
