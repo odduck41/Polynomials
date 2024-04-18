@@ -45,6 +45,7 @@ void Window::add() {
                        new QTableWidgetItem);
         table->item(table->rowCount() - 1, 0)->
                 setText(QString::fromStdString((std::string)polynomial));
+        table->item(table->rowCount() - 1, 0);
     } catch (std::exception& err) {
         ;
         return;
