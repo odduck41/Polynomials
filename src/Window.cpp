@@ -27,6 +27,16 @@ void Window::screen() {
     remove->setText("remove");
     objects["remove"] = remove;
     connect(remove, &QPushButton::pressed, this, &Window::remove);
+
+    const auto sum = new QPushButton(this);
+    sum->setGeometry({450, 130, 120, 35});
+    sum->setText("+");
+    objects["sum"] = sum;
+
+    const auto composition = new QPushButton(this);
+    composition->setGeometry({575, 130, 120, 35});
+    composition->setText("*");
+    objects["comp"] = composition;
 }
 
 void Window::add() {
@@ -58,4 +68,18 @@ void Window::remove() {
         delete item;
         ++last;
     }
+}
+
+void Window::sum() {
+    std::vector<int> indexes;
+    for (int i = 0; i < table->count(); ++i) {
+        if (table->item(i)->isSelected()) {
+            indexes.push_back(i);
+        }
+    }
+    Polynomial ans;
+    for (auto& index: indexes) {
+        ans = ans + dataBase[index];
+    }
+    dynamic_cast<QLineEdit*>(objects["input"])->setText(QString::fromStdString((std::string)ans));
 }

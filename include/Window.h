@@ -19,5 +19,6 @@ class Window : public QMainWindow {
     // button slots
     void add();
     void remove();
+    void sum();
     DataBase dataBase;
 };
