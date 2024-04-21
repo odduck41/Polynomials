@@ -138,10 +138,24 @@ Polynomial::operator std::string() const {
         for (auto& j: monomials[i].powers) {
             if (j != 0) flag = true;
         }
-        if (monomials[i].coefficient == -1 && flag) {
+        if (monomials[i].coefficient == 1 && !flag) {
+            if (i != 0) {
+                answer += "+";
+            }
+            answer += "1";
+        } else if (monomials[i].coefficient == -1 && flag) {
             answer += "-";
-        } else if (monomials[i].coefficient != 1 || !flag) {
+        } else if (monomials[i].coefficient >= 0 && monomials[i].coefficient != 1) {
+            if (i != 0) {
+                answer += "+";
+            }
             answer += std::to_string(monomials[i].coefficient);
+        } else if (monomials[i].coefficient < 0) {
+            answer += std::to_string(monomials[i].coefficient);
+        } else if (monomials[i].coefficient == 1) {
+            if (i != 0) {
+                answer += "+";
+            }
         }
         for (int j = 0; j < 26; ++j) {
             if (monomials[i].powers[j] != 0) {
@@ -150,9 +164,6 @@ Polynomial::operator std::string() const {
                     answer += "^" + std::to_string(monomials[i].powers[j]);
                 }
             }
-        }
-        if (i + 1 != monomials.size()) {
-            answer += " + ";
         }
     }
     return answer;
