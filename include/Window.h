@@ -2,7 +2,7 @@
 #include "../include/DataBase.h"
 #include <QMainWindow>
 #include <QPushButton>
-#include <QTableWidget>
+#include <QListWidget>
 #include <map>
 #include <string>
 
@@ -15,7 +15,7 @@ class Window : public QMainWindow {
 
   private:
     std::map<std::string, QWidget*> objects;
-    QTableWidget* table{};
+    QListWidget* table{};
     // button slots
     void add();
     void remove();
