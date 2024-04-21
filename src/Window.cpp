@@ -95,7 +95,7 @@ void Window::sum() {
     dynamic_cast<QLineEdit*>(objects["input"])->setText(QString::fromStdString((std::string)ans));
 }
 
-void Window::compostion() {
+void Window::composition() {
     std::vector<int> indexes;
     for (int i = 0; i < table->count(); ++i) {
         if (table->item(i)->isSelected()) {

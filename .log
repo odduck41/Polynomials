@@ -600,3 +600,11 @@ Sun Apr 21 16:34:26 2024: Received expression: «4ab+4ac-4bc»
 Sun Apr 21 16:34:32 2024: Received expression: «8ab+8ac-8bc»
 Sun Apr 21 16:34:38 2024: Received expression: «8ab+8ac-8bc+7»
 Sun Apr 21 16:34:43 2024: Received expression: «16ab+16ac-16bc+14»
+Sun Apr 21 16:37:57 2024: Received expression: «x»
+Sun Apr 21 16:37:59 2024: Received expression: «x^2»
+Sun Apr 21 16:38:02 2024: Received expression: «x^4»
+Sun Apr 21 16:38:06 2024: Received expression: «x^6»
+Sun Apr 21 16:38:09 2024: Received expression: «x^12»
+Sun Apr 21 16:38:15 2024: Received expression: «0»
+Sun Apr 21 16:38:34 2024: Received expression: «x^25»
+Sun Apr 21 16:38:39 2024: Received expression: «2x^25»
