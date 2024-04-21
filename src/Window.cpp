@@ -32,6 +32,7 @@ void Window::screen() {
     sum->setGeometry({450, 130, 120, 35});
     sum->setText("+");
     objects["sum"] = sum;
+    connect(sum, &QPushButton::pressed, this, &Window::sum);
 
     const auto composition = new QPushButton(this);
     composition->setGeometry({575, 130, 120, 35});

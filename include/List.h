@@ -96,7 +96,13 @@ void List<T>::erase(size_t pos) {
 
 template<class T>
 T& List<T>::operator[](size_t pos) const {
-    if (pos >= size_) throw std::out_of_range("Index is greater than List size");
+    if (pos >= size_) {
+        std::string err = "Index is greater than/equal to List size: ";
+        err += std::to_string(pos);
+        err += " >= ";
+        err += std::to_string(size_);
+        throw std::out_of_range(err);
+    }
     Node *q = root;
     while (pos--) {
         q = q->next;

@@ -164,8 +164,8 @@ Polynomial Polynomial::operator+(const Polynomial& other) const {
         answer.monomials.insert(monomials[i]);
     }
     for (int i = 0; i < other.monomials.size(); ++i) {
-        answer.monomials.insert(monomials[i]);
-    };
+        answer.monomials.insert(other.monomials[i]);
+    }
     answer.normalize();
     return answer;
 }
