@@ -1,5 +1,4 @@
 #include "../include/Window.h"
-#include "../include/Polynomial.h"
 #include <QLineEdit>
 #include <QHeaderView>
 #include <QScrollBar>
@@ -37,19 +36,18 @@ void Window::add() {
         dataBase.insert(polynomial);
         table->addItem(QString::fromStdString((std::string)polynomial));
     } catch (std::exception& err) {
-        ;
         return;
     }
 }
 
 void Window::remove() {
     std::vector<int> indexes;
-    for (size_t i = 0; i < table->count(); ++i) {
+    for (int i = 0; i < table->count(); ++i) {
         if (table->item(i)->isSelected()) {
             indexes.push_back(i);
         }
     }
-    long long last = 0;
+    int last = 0;
     for (auto& index: indexes) {
         dataBase.erase(index - last);
         ++last;
