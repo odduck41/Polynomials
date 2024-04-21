@@ -20,5 +20,6 @@ class Window : public QMainWindow {
     void add();
     void remove();
     void sum();
+    void composition();
     DataBase dataBase;
 };
