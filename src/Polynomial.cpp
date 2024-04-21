@@ -145,7 +145,7 @@ Polynomial::operator std::string() const {
             answer += "1";
         } else if (monomials[i].coefficient == -1 && flag) {
             answer += "-";
-        } else if (monomials[i].coefficient >= 0 && monomials[i].coefficient != 1) {
+        } else if (monomials[i].coefficient > 0 && monomials[i].coefficient != 1) {
             if (i != 0) {
                 answer += "+";
             }
@@ -165,6 +165,9 @@ Polynomial::operator std::string() const {
                 }
             }
         }
+    }
+    if (answer.empty()) {
+        answer = "0";
     }
     return answer;
 }

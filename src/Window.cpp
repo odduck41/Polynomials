@@ -78,6 +78,13 @@ void Window::sum() {
             indexes.push_back(i);
         }
     }
+    if (indexes.empty()) {
+        dynamic_cast<QLineEdit*>(objects["input"])->setText("0");
+        return;
+    }
+    if (indexes.size() == 1) {
+        indexes.emplace_back(indexes[0]);
+    }
     Polynomial ans;
     for (auto& index: indexes) {
         ans = ans + dataBase[index];
