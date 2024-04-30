@@ -2,6 +2,8 @@
 #include <QLineEdit>
 #include <QHeaderView>
 #include <QScrollBar>
+#include <QDialog>
+#include <QLabel>
 
 Window::Window(QWidget* p) : QMainWindow(p) {
     this->setGeometry({0, 0, 700, 550});
@@ -38,7 +40,6 @@ void Window::screen() {
     composition->setGeometry({575, 130, 120, 35});
     composition->setText("*");
     objects["comp"] = composition;
-    connect(composition, &QPushButton::pressed, this, &Window::composition);
 
 }
 

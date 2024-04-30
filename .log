@@ -608,3 +608,9 @@ Sun Apr 21 16:38:09 2024: Received expression: «x^12»
 Sun Apr 21 16:38:15 2024: Received expression: «0»
 Sun Apr 21 16:38:34 2024: Received expression: «x^25»
 Sun Apr 21 16:38:39 2024: Received expression: «2x^25»
+Wed Apr 24 08:55:17 2024: Received expression: «xxxxxxxxxxxxxxx»
+Wed Apr 24 08:55:22 2024: Received expression: «xxxxxxxxxxxxxxx+4»
+Wed Apr 24 08:55:29 2024: Received expression: «x^30+4x^15»
+Wed Apr 24 08:55:39 2024: Received expression: «x^30+6x^15+4»
+Tue Apr 30 14:15:35 2024: Received expression: «3045x»
+Tue Apr 30 14:15:38 2024: Received expression: «3045x+324523x»
